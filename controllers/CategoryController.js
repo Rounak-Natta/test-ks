@@ -1,5 +1,10 @@
 import Category from '../models/CategoryModel.js';
-import { categoryTypeImages } from '../../frontend/src/utils/categoryImages.js'; 
+
+const categoryImages = {
+  breakfast: "https://cdn.example.com/breakfast.png",
+  lunch: "https://cdn.example.com/lunch.png",
+  dinner: "https://cdn.example.com/dinner.png",
+};
 
 // Add category
 export const addCategory = async (req, res) => {
@@ -83,3 +88,4 @@ export const deleteCategory = async (req, res) => {
     return res.status(500).json({ success: false, message: 'Server error while deleting category' });
   }
 };
+
